@@ -12,7 +12,6 @@
 #pragma mark  设置通用的交换方法
 @implementation NSObject (Swizzling)
 
-#pragma mark 进行方法的交换
 + (BOOL)gl_swizzleMethod:(SEL)origSel withMethod:(SEL)altSel {
     //1、获取原生的方法和我们要交换的方法
     Method origMethod = class_getInstanceMethod(self, origSel);
